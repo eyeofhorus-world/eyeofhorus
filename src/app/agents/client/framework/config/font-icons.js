@@ -1,0 +1,21 @@
+
+export default {
+  add: 'add',
+  quoteRight: 'format_quote',
+  undo: 'undo',
+  arrowForward: 'arrow_forward',
+  arrowBackward: 'arrow_back',
+  arrowForwardBigAssVersion: 'forward',
+  done: 'done',
+  clear: 'clear',
+  thumbUp: 'thumb_up',
+  thumbDown: 'thumb_down',
+  quote: 'format_quote',
+  link: 'link',
+  search: 'search',
+  fingerprint: 'fingerprint',
+  refresh: 'refresh',
+  gesture: 'gesture',
+  keyboardArrowDown: 'keyboard_arrow_down',
+  cancel: 'cancel',
+};
