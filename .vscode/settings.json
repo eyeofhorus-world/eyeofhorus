@@ -1,0 +1,23 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+  "editor.quickSuggestions": false,
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.quickSuggestionsDelay": 10,
+  "editor.wordBasedSuggestions": false,
+  "editor.autoClosingBrackets": false,
+  "editor.suggestOnTriggerCharacters": false,
+  "editor.formatOnType": false,
+  "editor.parameterHints": false,
+  "[json]":  {
+    "editor.quickSuggestions": {
+        "strings": false
+    }
+  },
+
+  "editor.showFoldingControls": "always",
+  "editor.minimap.enabled": false,
+
+  "eslint.autoFixOnSave": false,
+
+  "editor.tabSize": 2
+}

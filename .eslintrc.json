@@ -1,0 +1,46 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "jquery": true
+  },
+  "extends": [
+    "airbnb",
+    "plugin:flowtype/recommended"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "flowtype"
+  ],
+  "rules": {
+    "indent": [ "error", 2 ],
+    "linebreak-style": [ "error", "unix" ],
+    "quotes": [ "error", "single" ],
+    "semi": [ "error", "always" ],
+    "new-cap": [ 2, { "capIsNewExceptions": [ "Map", "List" ] } ],
+    "react/jsx-space-before-closing": 0,
+    "react/prefer-stateless-function": 0,
+    "react/prop-types": 0,
+    "react/jsx-first-prop-new-line": 0,
+    "react/jsx-closing-bracket-location": 0,
+    "react/forbid-prop-types": 0,
+    "react/jsx-boolean-value": 0,
+    "react/sort-comp": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "jsx-a11y/anchor-has-content": 0,
+    "class-methods-use-this": "off",
+    "no-else-return": "off",
+    "max-len": "off",
+    "no-multiple-empty-lines": "off",
+    "no-trailing-spaces": "off"
+  }
+}
