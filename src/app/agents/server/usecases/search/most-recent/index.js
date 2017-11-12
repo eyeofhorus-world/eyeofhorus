@@ -16,9 +16,9 @@ export default class SearchMostRecent {
 
     this.run = this.run.bind(this);
   }
-  run(viewingAsUserId) {
+  run(viewingAsUserId, dateFrom) {
     const self = this;
-    return self.articleProvider.findAllSortByUpdatedLastRecent({ limit: showHowManyArticles, skip: 0 })
+    return self.articleProvider.findAllSortByUpdatedLastRecent({ limit: showHowManyArticles, dateFrom })
       .then((articlesDehydrated) => {
         const promiseGroup = new PromiseGroup();
         const articlesHydrated = [];
