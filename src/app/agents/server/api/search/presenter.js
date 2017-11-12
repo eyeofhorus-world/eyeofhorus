@@ -7,7 +7,7 @@ export default class SearchPresenter {
     const unescapedQuery = unescape(query);
     return this.usecases.search.run(unescapedQuery, skip, viewingAsUserId);
   }
-  onMostRecent(viewingAsUserId) {
-    return this.usecases.search.mostRecent.run(viewingAsUserId);
+  onMostRecent(viewingAsUserId, dateFrom) {
+    return this.usecases.search.mostRecent.run(viewingAsUserId, dateFrom ? new Date(dateFrom) : new Date());
   }
 }

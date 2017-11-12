@@ -31,7 +31,8 @@ export default class SearchView {
   mostRecent(req, res) {
     const self = this;
     this.presenter.onMostRecent(
-      selectors.req.user.id(req))
+      selectors.req.user.id(req),
+      selectors.req.dateFrom(req))
     .then(
       (results) => {
         self.commonApi.json(res, {
