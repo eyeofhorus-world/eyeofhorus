@@ -16,9 +16,9 @@ export default class SearchMostRecent {
 
     this.run = this.run.bind(this);
   }
-  run(viewingAsUserId) {
+  run(viewingAsUserId, dateFrom) {
     const self = this;
-    return self.articleProvider.findAllSortByUpdatedLastRecent({ limit: showHowManyArticles, skip: 0 })
+    return self.articleProvider.findAllSortByUpdatedLastRecent({ limit: showHowManyArticles, dateFrom })
       .then((articlesDehydrated) => {
         const promiseGroup = new PromiseGroup();
         const articlesHydrated = [];
@@ -32,7 +32,7 @@ export default class SearchMostRecent {
         });
         return promiseGroup.finishAll().then(() => Promise.resolve({ 
           articles: Immutable.fromJS(arrayHelpers.sortArrayByKeyAsNumber(articlesHydrated).map(box => box.value)),
-          isThereMore: false,
+          isThereMore: articlesHydrated.length >= showHowManyArticles,
         }));
       });
   }

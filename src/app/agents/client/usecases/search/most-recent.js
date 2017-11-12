@@ -12,9 +12,9 @@ export default class SearchMainUsecase {
 
     this.run = this.run.bind(this);
   }
-  run(viewingAsUserId) {
+  run(viewingAsUserId, dateFrom) {
     const self = this;
-    return this.searchProvider.mostRecent(viewingAsUserId)
+    return this.searchProvider.mostRecent(viewingAsUserId, dateFrom ? dateFrom.getTime() : undefined)
       .then((results) => {
         const promiseGroup = new PromiseGroup();
         

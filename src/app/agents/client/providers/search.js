@@ -24,11 +24,12 @@ export default {
       },
     });
   }),
-  mostRecent: () => new Promise((resolve, reject) => {
+  mostRecent: (viewingAsUserId, dateFrom) => new Promise((resolve, reject) => {
     $.ajax({
       url: '/search/most-recent',
       type: 'POST',
       data: {
+        dateFrom,
       },
       cache: false,
       success: (data) => {

@@ -76,7 +76,8 @@ export default {
     },
 
     searchQuery: req => (req && req.body && req.body.searchQuery ? req.body.searchQuery : ''),
-    skip: req => (req && req.body ? parseInt(req.body.skip, 10) : 0),
+    skip: req => (req && req.body && req.body.skip ? parseInt(req.body.skip, 10) : 0),
+    dateFrom: req => (req && req.body && req.body.dateFrom ? parseInt(req.body.dateFrom, 10) : undefined),
 
     quote: req => (req && req.body && req.body.quote ? req.body.quote : ''),
     attributes: req => (req && req.body && req.body.attributes ? req.body.attributes : []),

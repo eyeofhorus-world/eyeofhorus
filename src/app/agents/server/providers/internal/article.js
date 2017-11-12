@@ -48,13 +48,16 @@ articleSchema.statics.deleteArticleWithId = function (id) {
   return mongo.removeAll(this, { _id: mongoose.Types.ObjectId(id) });
 };
 
-articleSchema.statics.findAllSortByUpdatedLastRecent = function ({ limit, skip }) {
+articleSchema.statics.findAllSortByUpdatedLastRecent = function ({ limit, dateFrom }) {
   const predicate = {
+    updatedAt: {
+      $lt: dateFrom || new Date(),
+    },
   };
   const sortPredicate = [
     ['updatedAt', -1],
   ];
-  return mongo.findMultipleByPredicate(this, predicate, { lean: true, limit, skip, sort: sortPredicate });
+  return mongo.findMultipleByPredicate(this, predicate, { lean: true, limit, skip: 0, sort: sortPredicate });
 };
 
 articleSchema.statics.notifyArticleAsBeingUpdated = function (id) {
