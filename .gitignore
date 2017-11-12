@@ -88,3 +88,7 @@ Temporary Items
 # Local Debugging garbage
 /data/
 
+# vscode
+/.vscode/
+
+
