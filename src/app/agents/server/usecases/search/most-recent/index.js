@@ -32,7 +32,7 @@ export default class SearchMostRecent {
         });
         return promiseGroup.finishAll().then(() => Promise.resolve({ 
           articles: Immutable.fromJS(arrayHelpers.sortArrayByKeyAsNumber(articlesHydrated).map(box => box.value)),
-          isThereMore: false,
+          isThereMore: articlesHydrated.length >= showHowManyArticles,
         }));
       });
   }
