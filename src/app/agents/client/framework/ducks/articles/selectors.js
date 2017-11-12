@@ -11,6 +11,8 @@ const didLoadingMoreFail = state => state.getIn([moduleName, 'loadingMoreFailed'
 const values = state => (state.getIn([moduleName, 'values']) || Immutable.fromJS([]));
 const valuesCount = state => (state.getIn([moduleName, 'values']) || Immutable.fromJS([])).size;
 const isThereMore = state => (state.getIn([moduleName, 'isThereMore']) === true);
+const valuesLast = createSelector(values, articles => articles.last() || Immutable.fromJS({}));
+const valuesLastUpdatedAt = createSelector(valuesLast, articleLast => new Date(articleLast.get('updatedAt') || undefined));
 
 const valueId = value => ((value || Immutable.fromJS({})).get('_id'));
 const valueQuote = value => ((value || Immutable.fromJS({})).get('quote'));
@@ -48,6 +50,8 @@ export default {
   isLoadingMore,
   values,
   valuesCount,
+  valuesLast,
+  valuesLastUpdatedAt,
   isThereMore,
   didLoadingMoreFail,
   

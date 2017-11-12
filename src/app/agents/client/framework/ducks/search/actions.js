@@ -132,21 +132,36 @@ const onSearch = (dispatch, getState, usecases, router) => {
 
 const onShowMore = (dispatch, getState, usecases) => {
   const query = searchSelectors.query(getState());
-  dispatch(searchInProgress(query));
-  dispatch(articlesInternalActions.onMoreLoading());
-
-  const numberOfItemsToSkip = articlesSelectors.valuesCount(getState());
-
   const viewingAsUserId = userSelectors.id(getState());
-  usecases.search.run(query, numberOfItemsToSkip, viewingAsUserId).then(
-    ({ articles, isThereMore }) => {
-      dispatch(searchSuccessful(query));
-      dispatch(articlesInternalActions.onMoreLoadingSuccess(articles, isThereMore));
-    },
-    () => {
-      dispatch(searchSuccessful(query));
-      dispatch(articlesInternalActions.onMoreLoadingFailed());
-    });
+  if (searchSelectors.isShowingMostRecent(getState()) === true) {
+    dispatch(searchInProgress(query));
+    dispatch(articlesInternalActions.onMoreLoading());
+
+    const lastUpdatedAt = articlesSelectors.valuesLastUpdatedAt(getState());
+    usecases.search.mostRecent.run(viewingAsUserId, lastUpdatedAt).then(
+      ({ articles, isThereMore }) => {
+        dispatch(searchSuccessful(query));
+        dispatch(articlesInternalActions.onMoreLoadingSuccess(articles, isThereMore));
+      },
+      () => {
+        dispatch(searchSuccessful(query));
+        dispatch(articlesInternalActions.onMoreLoadingFailed());
+      });
+  } else {
+    dispatch(searchInProgress(query));
+    dispatch(articlesInternalActions.onMoreLoading());
+
+    const numberOfItemsToSkip = articlesSelectors.valuesCount(getState());
+    usecases.search.run(query, numberOfItemsToSkip, viewingAsUserId).then(
+      ({ articles, isThereMore }) => {
+        dispatch(searchSuccessful(query));
+        dispatch(articlesInternalActions.onMoreLoadingSuccess(articles, isThereMore));
+      },
+      () => {
+        dispatch(searchSuccessful(query));
+        dispatch(articlesInternalActions.onMoreLoadingFailed());
+      });
+  }
 };
 
 export default {
