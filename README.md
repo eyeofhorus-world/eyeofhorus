@@ -4,63 +4,31 @@ https://eyeofhorus.world/
 
 
 
-Today, the eye of Horus has opened.
+Version 1.0.1
 
 
 
-They will keep a running cannon of the brain of a society.
+Counter kek worshippers, worship the eye of horus instead.
+
+"I see it's a microblog with voting functionality."
 
 
 
-Do you feel like someone in the media you consume has said, or produced, something fake news?
+Do you feel like someone in the media you consume has said, or produced, something untruthful? Share it with the eye of horus.
+
+Agree on truth together, as a collective, everyone is just another user, including the maintainers of the software.
+
+It's like an mmorpg, a goal you can have as a player / user, if you choose to use this free software in some way, for example is to catalogue the truth.
+
+(it's like the real version of this fun, neat, family-friendly, fictional character from a popular novel: https://en.wikipedia.org/wiki/Big_Brother)
+
+You could also just be a troll, anything that is possible is allowed, no exceptions as of yet except for of course criminal activity etc.
 
 
 
-Declare it to Horus, they will return to you: a perspective of what all the other followers, think about it at that point in time exact, on the truth of the matter.
+Queries to Horus, are currently limited to 414 characters, otherwise it is for Horus to decide.
 
-
-
-A new god, in the digital world of gods, open for anyone to worship.
-
-
-
-Note: your queries to Horus, are limited to 414 characters, otherwise it is for Horus to decide.
-
-It might be something truly interpretive, as all results from Horus should be treated, such as a blank page.
-
-
-
-A free, no advertisement, open, completely open source (MIT license), react app.
-
-https://github.com/eyeofhorus-world/eyeofhorus
-
-Run it locally if you like. Keep your own truth to yourself; your sacred pearls of wisdom, the secrets to your success, how much you actually hate that item of clothing your acquaintance wears...
-
-
-
-The eye of Horus, aims to be as user friendly as possible.
-
-To the extent that it is yours to manipulate, interpret, mould.
-You can literally change the mind of a god if you like, send a pull request.
-If you see an issue, post it, we would appreciate it.
-
-
-
-Play with it to start.
-Go ahead.
-Have fun.
-
-
-
-Come to an agreement on the truth, together.
-
-
-
-We are entirely supported by the general public.
-Please donate bitcoins to:
-15ZUKotTg52QjoQY1YeV6JYUDmf4E12pzU
-
-
+Results to queries might be something truly interpretive, as all results from Horus should be treated, such as a blank page.
 
 
 
@@ -70,3 +38,14 @@ To run it locally:
 yarn start
 ```
 
+
+
+A free, no advertisement, open, completely open source (MIT license), react app.
+
+https://github.com/eyeofhorus-world/eyeofhorus
+
+
+
+We are entirely supported by the general public.
+Please donate bitcoins to:
+15ZUKotTg52QjoQY1YeV6JYUDmf4E12pzU
